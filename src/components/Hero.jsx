@@ -1,3 +1,5 @@
+import profilePic from "../IMG_7684.jpeg";
+
 export default function Hero() {
   return (
     <section
@@ -11,19 +13,17 @@ export default function Hero() {
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
           Hi, I&apos;m{" "}
-          <span className="text-sky-400">
-            Huseyn Hajiyev
-          </span>
+          <span className="text-sky-400">Huseyn Hajiyev</span>
         </h1>
         <p className="text-lg text-slate-300 max-w-xl">
           Data Analyst and Economics student with{" "}
           <span className="text-sky-300">
-            hands-on experience in data analysis, machine learning and
-            visualization
+            hands-on experience in data analysis, machine learning and visualization
           </span>
-          . I enjoy turning raw data into clear, actionable insights that
-          support real business and policy decisions.
+          . I enjoy turning raw data into clear, actionable insights that support
+          real business and policy decisions.
         </p>
+
         <div className="flex flex-wrap gap-3 pt-2">
           <a
             href="#projects"
@@ -45,6 +45,7 @@ export default function Hero() {
             Download CV
           </a>
         </div>
+
         <p className="text-xs text-slate-500">
           Focus: Python · R · SQL · Power BI · Tableau · Econometrics
         </p>
@@ -53,16 +54,21 @@ export default function Hero() {
       {/* Right – card */}
       <div className="w-full md:w-64">
         <div className="relative rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-5 shadow-lg shadow-sky-950/40">
-          <div className="h-28 w-28 rounded-2xl bg-slate-800 mx-auto mb-4 flex items-center justify-center text-4xl">
-            <span className="select-none">href="/IMG_7684.JPEG"</span>
+          
+          <div className="h-28 w-28 rounded-2xl overflow-hidden mx-auto mb-4 border border-slate-700 shadow-md shadow-sky-900/20">
+            <img
+              src={profilePic}
+              alt="Huseyn Hajiyev"
+              className="h-full w-full object-cover"
+            />
           </div>
+
           <div className="space-y-1 text-center">
             <p className="text-sm font-semibold text-slate-100">
               Data Analyst & Econ Student
             </p>
             <p className="text-xs text-slate-400">
-              M.Sc. Economics ·  
-              3 years of analytics experience 
+              M.Sc. Economics · 3 years of analytics experience
             </p>
           </div>
         </div>
