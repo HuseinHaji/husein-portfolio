@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Left – text */}
       <div className="flex-1 space-y-4">
         <p className="text-xs uppercase tracking-[0.25em] text-sky-400">
-          Data · Analytics · Economics
+          Data Analytics · Data Science · Economics
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
           Hi, I&apos;m{" "}
@@ -61,8 +61,8 @@ export default function Hero() {
               Data Analyst & Econ Student
             </p>
             <p className="text-xs text-slate-400">
-              M.Sc. Economics · 3 years of analytics experience · Portfolio
-              designed for data roles.
+              M.Sc. Economics 
+              3 years of analytics experience 
             </p>
           </div>
         </div>
