@@ -35,7 +35,7 @@ export default function Hero() {
             href="#contact"
             className="px-4 py-2 rounded-full border border-slate-700 hover:border-sky-400 text-sm font-semibold text-slate-200 hover:text-sky-300 transition-colors"
           >
-            Contact me
+            Contact Me
           </a>
           <a
             href="/Huseyn_Hajiyev_Resume.pdf"
