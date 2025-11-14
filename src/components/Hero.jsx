@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="relative rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-5 shadow-lg shadow-sky-950/40">
         <div className="h-28 w-28 mx-auto mb-4 rounded-2xl overflow-hidden border border-slate-700">
           <img
-            src="/huseyn.jpg"
+            src="/IMG_7684.JPEG"
             alt="Huseyn Hajiyev"
             className="h-full w-full object-cover"
           />
