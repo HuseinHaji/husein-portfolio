@@ -61,7 +61,7 @@ export default function Hero() {
               Data Analyst & Econ Student
             </p>
             <p className="text-xs text-slate-400">
-              M.Sc. Economics 
+              M.Sc. Economics ·  
               3 years of analytics experience 
             </p>
           </div>
