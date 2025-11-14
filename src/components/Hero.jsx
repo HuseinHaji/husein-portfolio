@@ -54,7 +54,7 @@ export default function Hero() {
       <div className="w-full md:w-64">
         <div className="relative rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-5 shadow-lg shadow-sky-950/40">
           <div className="h-28 w-28 rounded-2xl bg-slate-800 mx-auto mb-4 flex items-center justify-center text-4xl">
-            <span className="select-none">📈</span>
+            <span className="select-none">href="/IMG_7684.JPEG"</span>
           </div>
           <div className="space-y-1 text-center">
             <p className="text-sm font-semibold text-slate-100">
