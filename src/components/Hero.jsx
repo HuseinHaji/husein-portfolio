@@ -37,6 +37,13 @@ export default function Hero() {
           >
             Contact me
           </a>
+          <a
+            href="/Huseyn_Hajiyev_Resume.pdf"
+            className="px-4 py-2 rounded-full border border-slate-700 hover:border-sky-400 text-sm font-semibold text-slate-200 hover:text-sky-300 transition-colors"
+            download
+          >
+            Download CV
+          </a>
         </div>
         <p className="text-xs text-slate-500">
           Focus: Python · R · SQL · Power BI · Tableau · Econometrics
