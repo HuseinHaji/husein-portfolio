@@ -51,13 +51,13 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.08,
+      staggerChildren: 0.1,
     },
   },
 };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 12 },
+const itemVariants = {
+  hidden: { opacity: 0, y: 14 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -67,38 +67,49 @@ export default function Experience() {
       <h2 className="text-xl font-semibold tracking-tight">
         Experience & Education
       </h2>
+
       <motion.div
-        className="space-y-4"
+        className="relative mt-4 pl-6 sm:pl-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
       >
-        {experiences.map((exp) => (
+        {/* vertical line */}
+        <div className="absolute left-2 sm:left-3 top-0 bottom-0 border-l border-slate-800/70" />
+
+        {experiences.map((exp, index) => (
           <motion.div
             key={exp.role + exp.org}
-            variants={cardVariants}
-            className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4"
+            variants={itemVariants}
+            className="relative pl-4 sm:pl-6 pb-8 last:pb-0"
           >
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <div>
-                <p className="text-sm font-semibold text-slate-100">
-                  {exp.role}
-                </p>
-                <p className="text-xs text-slate-400">{exp.org}</p>
+            {/* timeline dot */}
+            <div className="absolute left-0 sm:left-1 top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
+
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <div>
+                  <p className="text-sm font-semibold text-slate-100">
+                    {exp.role}
+                  </p>
+                  <p className="text-xs text-slate-400">{exp.org}</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-slate-400">{exp.period}</p>
+                  <p className="text-[11px] text-slate-500">
+                    {exp.location}
+                  </p>
+                </div>
               </div>
-              <div className="text-right">
-                <p className="text-xs text-slate-400">{exp.period}</p>
-                <p className="text-[11px] text-slate-500">{exp.location}</p>
-              </div>
+              <ul className="mt-2 space-y-1 text-xs text-slate-300">
+                {exp.bullets.map((b) => (
+                  <li key={b} className="leading-relaxed">
+                    • {b}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="mt-2 space-y-1 text-xs text-slate-300">
-              {exp.bullets.map((b) => (
-                <li key={b} className="leading-relaxed">
-                  • {b}
-                </li>
-              ))}
-            </ul>
           </motion.div>
         ))}
       </motion.div>
