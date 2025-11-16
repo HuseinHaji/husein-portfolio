@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
 
-const stack = [
-  "Python",
-  "R (basics)",
-  "SQL",
-  "Power BI",
-  "Tableau",
-  "Excel (advanced)",
-  "Git & GitHub",
+const rows = [
+  {
+    label: "Core analytics",
+    items: ["Python", "R (basics)", "SQL"],
+  },
+  {
+    label: "BI & visualization",
+    items: ["Power BI", "Tableau", "Excel (advanced)"],
+  },
+  {
+    label: "Data platforms & tools",
+    items: ["Oracle DB", "Git & GitHub", "APIs"],
+  },
 ];
 
 export default function TechStackStrip() {
@@ -19,21 +24,31 @@ export default function TechStackStrip() {
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <div className="rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-3 sm:px-6 sm:py-4 flex flex-wrap items-center gap-2 sm:gap-3">
+      <div className="rounded-2xl border border-slate-800 bg-slate-900/70 px-5 py-4 sm:px-6 sm:py-5 space-y-3">
         <p className="text-xs sm:text-sm font-semibold text-slate-100">
-          Tech stack:
+          Tech I use to ship real work:
         </p>
-        <div className="flex flex-wrap gap-2">
-          {stack.map((item) => (
-            <motion.span
-              key={item}
-              whileHover={{ scale: 1.04, y: -1 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 250, damping: 15 }}
-              className="inline-flex items-center rounded-full bg-slate-900 border border-slate-700 px-2.5 py-1 text-[11px] sm:text-xs text-slate-200"
+
+        <div className="space-y-2.5 text-[11px] sm:text-xs text-slate-300">
+          {rows.map((row) => (
+            <div
+              key={row.label}
+              className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2"
             >
-              {item}
-            </motion.span>
+              <span className="w-40 shrink-0 font-medium text-slate-200">
+                {row.label}
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {row.items.map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex items-center rounded-full bg-slate-950/70 border border-slate-700 px-2.5 py-0.5"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>

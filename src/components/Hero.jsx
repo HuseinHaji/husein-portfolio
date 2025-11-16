@@ -104,7 +104,7 @@ export default function Hero() {
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
-              3 years of analytics experience 
+              3+ years of analytics experience 
             </p>
           </div>
         </div>
