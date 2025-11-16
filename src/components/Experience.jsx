@@ -106,25 +106,32 @@ export default function Experience() {
         </h3>
 
         <motion.div
-          className="relative mt-4 pl-12"
+          className="mt-4 space-y-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
         >
-          {/* vertical line */}
-          <div className="absolute left-4 top-0 bottom-0 border-l border-slate-800/70" />
-
-          {work.map((exp) => (
+          {work.map((exp, idx) => (
             <motion.div
               key={exp.role + exp.org}
               variants={itemVariants}
-              className="relative pb-8 last:pb-0"
+              className="grid grid-cols-[20px,1fr] gap-4 pb-2"
             >
-              {/* timeline dot – centered on line */}
-              <div className="absolute left-4 -translate-x-1/2 top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
+              {/* Left: line + dot */}
+              <div className="relative">
+                {/* vertical line for this item */}
+                <div
+                  className={`absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-slate-800/70 ${
+                    idx === work.length - 1 ? "bottom-4" : ""
+                  }`}
+                />
+                {/* dot */}
+                <div className="relative mt-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950 mx-auto" />
+              </div>
 
-              <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 ml-4">
+              {/* Right: card */}
+              <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
                     <p className="text-sm font-semibold text-slate-100">
@@ -134,7 +141,9 @@ export default function Experience() {
                   </div>
                   <div className="text-right">
                     <p className="text-xs text-slate-400">{exp.period}</p>
-                    <p className="text-[11px] text-slate-500">{exp.location}</p>
+                    <p className="text-[11px] text-slate-500">
+                      {exp.location}
+                    </p>
                   </div>
                 </div>
 
@@ -155,28 +164,35 @@ export default function Experience() {
       {/* EDUCATION TIMELINE */}
       {/* ---------------------- */}
       <div>
-        <h3 className="text-lg font-semibold text-sky-400 mb-4">Education</h3>
+        <h3 className="text-lg font-semibold text-sky-400 mb-4">
+          Education
+        </h3>
 
         <motion.div
-          className="relative mt-4 pl-12"
+          className="mt-4 space-y-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
         >
-          {/* vertical line */}
-          <div className="absolute left-4 top-0 bottom-0 border-l border-slate-800/70" />
-
-          {education.map((exp) => (
+          {education.map((exp, idx) => (
             <motion.div
               key={exp.role + exp.org}
               variants={itemVariants}
-              className="relative pb-8 last:pb-0"
+              className="grid grid-cols-[20px,1fr] gap-4 pb-2"
             >
-              {/* timeline dot – centered on line */}
-              <div className="absolute left-4 -translate-x-1/2 top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
+              {/* Left: line + dot */}
+              <div className="relative">
+                <div
+                  className={`absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-slate-800/70 ${
+                    idx === education.length - 1 ? "bottom-4" : ""
+                  }`}
+                />
+                <div className="relative mt-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950 mx-auto" />
+              </div>
 
-              <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 ml-4">
+              {/* Right: card */}
+              <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
                     <p className="text-sm font-semibold text-slate-100">
@@ -186,7 +202,9 @@ export default function Experience() {
                   </div>
                   <div className="text-right">
                     <p className="text-xs text-slate-400">{exp.period}</p>
-                    <p className="text-[11px] text-slate-500">{exp.location}</p>
+                    <p className="text-[11px] text-slate-500">
+                      {exp.location}
+                    </p>
                   </div>
                 </div>
 
