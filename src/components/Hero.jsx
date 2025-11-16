@@ -100,12 +100,11 @@ export default function Hero() {
 
           <div className="space-y-2 text-center">
             <p className="text-base font-semibold text-slate-100">
-              Data Analyst & Econ Student
+              Data Analyst
             </p>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
-              M.Sc. Economics · 3 years of analytics experience · Portfolio
-              designed for data roles.
+              3 years of analytics experience 
             </p>
           </div>
         </div>
