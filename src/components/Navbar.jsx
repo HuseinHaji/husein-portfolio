@@ -19,7 +19,6 @@ export default function Navbar() {
         if (!section) return;
 
         const rect = section.getBoundingClientRect();
-        // 120px below top to account for navbar height
         if (rect.top <= 120 && rect.bottom >= 120) {
           setActive(item.id);
         }
@@ -27,8 +26,7 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // run once on mount
-
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -40,7 +38,7 @@ export default function Navbar() {
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between h-16">
-        {/* Logo + language selector */}
+        {/* Logo */}
         <div className="flex items-center gap-4">
           <a
             href="#top"
@@ -49,16 +47,6 @@ export default function Navbar() {
             <span>Husein</span>
             <span className="text-sky-400">.dev</span>
           </a>
-
-          {/* simple language selector UI (not wired yet) */}
-          <select
-            className="hidden sm:block bg-slate-950 border border-slate-700 text-[11px] text-slate-300 px-2 py-1 rounded-lg focus:outline-none focus-visible:ring-1 focus-visible:ring-sky-500"
-            defaultValue="EN"
-          >
-            <option value="EN">EN</option>
-            <option value="DE">DE</option>
-            <option value="AZ">AZ</option>
-          </select>
         </div>
 
         {/* Desktop nav */}
@@ -77,9 +65,9 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
-        </div }
+        </div>
 
-        {/* Mobile simple nav */}
+        {/* Mobile nav */}
         <div className="flex sm:hidden gap-3 text-xs">
           {navItems.map((item) => (
             <a

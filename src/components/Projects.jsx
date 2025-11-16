@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
 const projects = [
@@ -49,6 +50,25 @@ const projects = [
   },
 ];
 
+const listVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const listItemVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const panelVariants = {
+  hidden: { opacity: 0, x: 10 },
+  visible: { opacity: 1, x: 0 },
+};
+
 export default function Projects() {
   const [activeSlug, setActiveSlug] = useState(projects[0].slug);
   const activeProject = projects.find((p) => p.slug === activeSlug);
@@ -66,12 +86,19 @@ export default function Projects() {
 
       <div className="grid gap-4 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
         {/* Left: project list */}
-        <div className="space-y-3">
+        <motion.div
+          className="space-y-3"
+          variants={listVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.25 }}
+        >
           {projects.map((project) => {
             const isActive = project.slug === activeSlug;
             return (
-              <button
+              <motion.button
                 key={project.slug}
+                variants={listItemVariants}
                 onClick={() => setActiveSlug(project.slug)}
                 className={`w-full text-left rounded-2xl border p-4 transition-all ${
                   isActive
@@ -100,14 +127,21 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-              </button>
+              </motion.button>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Right: detail panel */}
         {activeProject && (
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 space-y-3">
+          <motion.div
+            key={activeProject.slug}
+            className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 space-y-3"
+            variants={panelVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.35, ease: "easeOut" }}
+          >
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <div>
                 <h3 className="text-sm font-semibold text-slate-100">
@@ -163,7 +197,7 @@ export default function Projects() {
                 View on GitHub ↗
               </a>
             )}
-          </div>
+          </motion.div>
         )}
       </div>
     </AnimatedSection>

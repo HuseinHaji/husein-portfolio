@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
 const experiences = [
@@ -46,8 +47,19 @@ const experiences = [
   },
 ];
 
-// simple sort newest-ish first; if you prefer fixed order, just map `experiences` directly
-const sortedExperiences = [...experiences]; // you can sort here if you want
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Experience() {
   return (
@@ -55,10 +67,17 @@ export default function Experience() {
       <h2 className="text-xl font-semibold tracking-tight">
         Experience & Education
       </h2>
-      <div className="space-y-4">
-        {sortedExperiences.map((exp) => (
-          <div
+      <motion.div
+        className="space-y-4"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        {experiences.map((exp) => (
+          <motion.div
             key={exp.role + exp.org}
+            variants={cardVariants}
             className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4"
           >
             <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -80,9 +99,9 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </AnimatedSection>
   );
 }

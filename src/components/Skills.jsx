@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
 const skillGroups = [
@@ -44,16 +45,37 @@ const skillGroups = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0 },
+};
+
 export default function Skills() {
   return (
     <AnimatedSection id="skills" className="space-y-4" delay={0.05}>
       <h2 className="text-xl font-semibold tracking-tight">
         Skills
       </h2>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <motion.div
+        className="grid gap-4 sm:grid-cols-2"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+      >
         {skillGroups.map((group) => (
-          <div
+          <motion.div
             key={group.title}
+            variants={cardVariants}
             className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4"
           >
             <h3 className="text-sm font-semibold text-slate-100 mb-2">
@@ -69,9 +91,9 @@ export default function Skills() {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </AnimatedSection>
   );
 }
