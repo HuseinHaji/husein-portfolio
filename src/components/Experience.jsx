@@ -12,11 +12,43 @@ const work = [
     location: "Cologne, Germany · On-site",
     bullets: [
       "Creation of ad-hoc queries, reports and data analyses for global risk underwriting.",
-      "Development of ML models for credit limit decisions (neural nets, fuzzy logic).",
-      "Working with Oracle DB, ML platforms and MS Office suite.",
+      "Development of machine learning models to optimize automatic credit limit decisions, including neural networks and fuzzy logic.",
+      "Utilizing Oracle databases, Microsoft Office suite, and machine learning platforms.",
     ],
   },
-  // ... (your other jobs unchanged)
+  {
+    role: "Data Analyst",
+    org: "FINCA NBCO",
+    period: "Jun 2023 – Aug 2024",
+    location: "Azerbaijan",
+    bullets: [
+      "Developed data-driven models to improve customer segmentation and risk assessment.",
+      "Streamlined data workflows with Python and SQL, improving reporting efficiency.",
+      "Designed dashboards in Power BI and Tableau to communicate insights to stakeholders.",
+    ],
+  },
+  {
+    role: "Data Scientist",
+    org: "QSS Analytics LLC",
+    period: "Mar 2023 – May 2023",
+    location: "Azerbaijan",
+    bullets: [
+      "Built automated dashboards and predictive models using Python, SQL, and BI tools.",
+      "Applied machine learning techniques for trend analysis and forecasting.",
+      "Delivered insights via interactive dashboards and analytics reports.",
+    ],
+  },
+  {
+    role: "Data Analyst",
+    org: "ANG LLC",
+    period: "Nov 2021 – Nov 2022",
+    location: "Azerbaijan",
+    bullets: [
+      "Analyzed large datasets to uncover trends and business drivers.",
+      "Supported forecasting and planning with improved analytical workflows.",
+      "Created clear, actionable reports for leadership.",
+    ],
+  },
 ];
 
 // ----------------------
@@ -30,7 +62,7 @@ const education = [
     location: "Bonn, Germany",
     bullets: [
       "Focus on Econometrics, Statistics, and quantitative methods.",
-      "Research in finance and term-structure modeling.",
+      "Developing research related to finance and term-structure modeling.",
     ],
   },
   {
@@ -39,12 +71,13 @@ const education = [
     period: "2019 – 2023",
     location: "Azerbaijan",
     bullets: [
-      "Strong foundation in quantitative analysis, statistics and finance.",
+      "Strong foundation in quantitative analysis, business statistics, and finance.",
       "Graduated with distinction (94.07 GPA).",
     ],
   },
 ];
 
+// Animation variants
 const containerVariants = {
   hidden: {},
   visible: {
@@ -64,7 +97,9 @@ export default function Experience() {
         Experience & Education
       </h2>
 
-      {/* WORK EXPERIENCE */}
+      {/* ---------------------- */}
+      {/* WORK EXPERIENCE TIMELINE */}
+      {/* ---------------------- */}
       <div>
         <h3 className="text-lg font-semibold text-sky-400 mb-4">
           Work Experience
@@ -77,7 +112,7 @@ export default function Experience() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
         >
-          {/* Vertical Line */}
+          {/* vertical line */}
           <div className="absolute left-4 top-0 bottom-0 border-l border-slate-800/70" />
 
           {work.map((exp) => (
@@ -86,7 +121,7 @@ export default function Experience() {
               variants={itemVariants}
               className="relative pb-8 last:pb-0"
             >
-              {/* Timeline Dot (centered on line) */}
+              {/* timeline dot (centered on line) */}
               <div className="absolute left-[10px] top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
 
               <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 ml-4">
@@ -105,7 +140,9 @@ export default function Experience() {
 
                 <ul className="mt-2 space-y-1 text-xs text-slate-300">
                   {exp.bullets.map((b) => (
-                    <li key={b}>• {b}</li>
+                    <li key={b} className="leading-relaxed">
+                      • {b}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -114,9 +151,13 @@ export default function Experience() {
         </motion.div>
       </div>
 
-      {/* EDUCATION */}
+      {/* ---------------------- */}
+      {/* EDUCATION TIMELINE */}
+      {/* ---------------------- */}
       <div>
-        <h3 className="text-lg font-semibold text-sky-400 mb-4">Education</h3>
+        <h3 className="text-lg font-semibold text-sky-400 mb-4">
+          Education
+        </h3>
 
         <motion.div
           className="relative mt-4 pl-12"
@@ -125,7 +166,7 @@ export default function Experience() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
         >
-          {/* Vertical Line */}
+          {/* vertical line */}
           <div className="absolute left-4 top-0 bottom-0 border-l border-slate-800/70" />
 
           {education.map((exp) => (
@@ -134,7 +175,7 @@ export default function Experience() {
               variants={itemVariants}
               className="relative pb-8 last:pb-0"
             >
-              {/* Timeline Dot (centered) */}
+              {/* timeline dot (centered on line) */}
               <div className="absolute left-[10px] top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
 
               <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 ml-4">
@@ -153,7 +194,9 @@ export default function Experience() {
 
                 <ul className="mt-2 space-y-1 text-xs text-slate-300">
                   {exp.bullets.map((b) => (
-                    <li key={b}>• {b}</li>
+                    <li key={b} className="leading-relaxed">
+                      • {b}
+                    </li>
                   ))}
                 </ul>
               </div>

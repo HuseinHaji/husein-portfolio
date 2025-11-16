@@ -33,7 +33,7 @@ export default function Hero() {
         </p>
 
         <p className="text-sm text-slate-400">
-          Data Analyst · M.Sc. Economics (Bonn) · Open to Working Student / Internship roles in Germany
+          Open to Working Student Data Analyst, Junior Data Analyst, or analytics-focused internships in Germany
         </p>
 
         <div className="flex flex-wrap gap-3 pt-2">
@@ -72,9 +72,6 @@ export default function Hero() {
           </span>
         </div>
 
-        <p className="text-xs text-slate-500 pt-1">
-          Focus: Python · R · SQL · Power BI · Tableau · Econometrics
-        </p>
       </motion.div>
 
       {/* Right – card (BIGGER) */}
