@@ -9,6 +9,11 @@ import Contact from "./components/Contact";
 import BackToTop from "./components/BackToTop";
 import SectionDivider from "./components/SectionDivider";
 
+import EmailIcon from "./icons/Email";
+import LinkedInIcon from "./icons/LinkedIn";
+import GitHubIcon from "./icons/GitHub";
+import InstagramIcon from "./icons/Instagram";
+
 function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -42,26 +47,38 @@ function App() {
               href="mailto:huseynhadjiyev@outlook.com"
               className="inline-flex items-center gap-1 hover:text-sky-400 transition-colors"
             >
-              <span>📧</span>
+              <EmailIcon className="w-4 h-4" />
               <span>Email</span>
             </a>
+
             <a
               href="https://www.linkedin.com/in/huseynhajiyev10"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1 hover:text-sky-400 transition-colors"
             >
-              <span>🔗</span>
+              <LinkedInIcon className="w-4 h-4" />
               <span>LinkedIn</span>
             </a>
+
             <a
               href="https://github.com/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1 hover:text-sky-400 transition-colors"
             >
-              <span>💻</span>
+              <GitHubIcon className="w-4 h-4" />
               <span>GitHub</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/huseinhajiev"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 hover:text-sky-400 transition-colors"
+            >
+              <InstagramIcon className="w-4 h-4" />
+              <span>Instagram</span>
             </a>
           </div>
         </div>
