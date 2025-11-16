@@ -121,8 +121,8 @@ export default function Experience() {
               variants={itemVariants}
               className="relative pb-8 last:pb-0"
             >
-              {/* timeline dot (centered on line) */}
-              <div className="absolute left-[10px] top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
+              {/* timeline dot – centered on line */}
+              <div className="absolute left-4 -translate-x-1/2 top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
 
               <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 ml-4">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -155,9 +155,7 @@ export default function Experience() {
       {/* EDUCATION TIMELINE */}
       {/* ---------------------- */}
       <div>
-        <h3 className="text-lg font-semibold text-sky-400 mb-4">
-          Education
-        </h3>
+        <h3 className="text-lg font-semibold text-sky-400 mb-4">Education</h3>
 
         <motion.div
           className="relative mt-4 pl-12"
@@ -175,8 +173,8 @@ export default function Experience() {
               variants={itemVariants}
               className="relative pb-8 last:pb-0"
             >
-              {/* timeline dot (centered on line) */}
-              <div className="absolute left-[10px] top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
+              {/* timeline dot – centered on line */}
+              <div className="absolute left-4 -translate-x-1/2 top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
 
               <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 ml-4">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
