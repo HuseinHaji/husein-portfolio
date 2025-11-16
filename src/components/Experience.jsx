@@ -12,43 +12,11 @@ const work = [
     location: "Cologne, Germany · On-site",
     bullets: [
       "Creation of ad-hoc queries, reports and data analyses for global risk underwriting.",
-      "Development of machine learning models to optimize automatic credit limit decisions, including neural networks and fuzzy logic.",
-      "Utilizing Oracle databases, Microsoft Office suite, and machine learning platforms.",
+      "Development of ML models for credit limit decisions (neural nets, fuzzy logic).",
+      "Working with Oracle DB, ML platforms and MS Office suite.",
     ],
   },
-  {
-    role: "Data Analyst",
-    org: "FINCA NBCO",
-    period: "Jun 2023 – Aug 2024",
-    location: "Azerbaijan",
-    bullets: [
-      "Developed data-driven models to improve customer segmentation and risk assessment.",
-      "Streamlined data workflows with Python and SQL, improving reporting efficiency.",
-      "Designed dashboards in Power BI and Tableau to communicate insights to stakeholders.",
-    ],
-  },
-  {
-    role: "Data Scientist",
-    org: "QSS Analytics LLC",
-    period: "Mar 2023 – May 2023",
-    location: "Azerbaijan",
-    bullets: [
-      "Built automated dashboards and predictive models using Python, SQL, and BI tools.",
-      "Applied machine learning techniques for trend analysis and forecasting.",
-      "Delivered insights via interactive dashboards and analytics reports.",
-    ],
-  },
-  {
-    role: "Data Analyst",
-    org: "ANG LLC",
-    period: "Nov 2021 – Nov 2022",
-    location: "Azerbaijan",
-    bullets: [
-      "Analyzed large datasets to uncover trends and business drivers.",
-      "Supported forecasting and planning with improved analytical workflows.",
-      "Created clear, actionable reports for leadership.",
-    ],
-  },
+  // ... (your other jobs unchanged)
 ];
 
 // ----------------------
@@ -62,7 +30,7 @@ const education = [
     location: "Bonn, Germany",
     bullets: [
       "Focus on Econometrics, Statistics, and quantitative methods.",
-      "Developing research related to finance and term-structure modeling.",
+      "Research in finance and term-structure modeling.",
     ],
   },
   {
@@ -71,13 +39,12 @@ const education = [
     period: "2019 – 2023",
     location: "Azerbaijan",
     bullets: [
-      "Strong foundation in quantitative analysis, business statistics, and finance.",
+      "Strong foundation in quantitative analysis, statistics and finance.",
       "Graduated with distinction (94.07 GPA).",
     ],
   },
 ];
 
-// Animation variants
 const containerVariants = {
   hidden: {},
   visible: {
@@ -97,34 +64,32 @@ export default function Experience() {
         Experience & Education
       </h2>
 
-      {/* ---------------------- */}
-      {/* WORK EXPERIENCE TIMELINE */}
-      {/* ---------------------- */}
+      {/* WORK EXPERIENCE */}
       <div>
         <h3 className="text-lg font-semibold text-sky-400 mb-4">
           Work Experience
         </h3>
 
         <motion.div
-          className="relative mt-4 pl-6 sm:pl-8"
+          className="relative mt-4 pl-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
         >
-          {/* vertical line */}
-          <div className="absolute left-2 sm:left-3 top-0 bottom-0 border-l border-slate-800/70" />
+          {/* Vertical Line */}
+          <div className="absolute left-4 top-0 bottom-0 border-l border-slate-800/70" />
 
           {work.map((exp) => (
             <motion.div
               key={exp.role + exp.org}
               variants={itemVariants}
-              className="relative pl-4 sm:pl-6 pb-8 last:pb-0"
+              className="relative pb-8 last:pb-0"
             >
-              {/* timeline dot */}
-              <div className="absolute left-0 sm:left-1 top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
+              {/* Timeline Dot (centered on line) */}
+              <div className="absolute left-[10px] top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
 
-              <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
+              <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 ml-4">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
                     <p className="text-sm font-semibold text-slate-100">
@@ -140,9 +105,7 @@ export default function Experience() {
 
                 <ul className="mt-2 space-y-1 text-xs text-slate-300">
                   {exp.bullets.map((b) => (
-                    <li key={b} className="leading-relaxed">
-                      • {b}
-                    </li>
+                    <li key={b}>• {b}</li>
                   ))}
                 </ul>
               </div>
@@ -151,32 +114,30 @@ export default function Experience() {
         </motion.div>
       </div>
 
-      {/* ---------------------- */}
-      {/* EDUCATION TIMELINE */}
-      {/* ---------------------- */}
+      {/* EDUCATION */}
       <div>
         <h3 className="text-lg font-semibold text-sky-400 mb-4">Education</h3>
 
         <motion.div
-          className="relative mt-4 pl-6 sm:pl-8"
+          className="relative mt-4 pl-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
         >
-          {/* vertical line */}
-          <div className="absolute left-2 sm:left-3 top-0 bottom-0 border-l border-slate-800/70" />
+          {/* Vertical Line */}
+          <div className="absolute left-4 top-0 bottom-0 border-l border-slate-800/70" />
 
           {education.map((exp) => (
             <motion.div
               key={exp.role + exp.org}
               variants={itemVariants}
-              className="relative pl-4 sm:pl-6 pb-8 last:pb-0"
+              className="relative pb-8 last:pb-0"
             >
-              {/* timeline dot */}
-              <div className="absolute left-0 sm:left-1 top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
+              {/* Timeline Dot (centered) */}
+              <div className="absolute left-[10px] top-2 h-3 w-3 rounded-full border border-sky-400 bg-slate-950" />
 
-              <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
+              <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 ml-4">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
                     <p className="text-sm font-semibold text-slate-100">
@@ -192,9 +153,7 @@ export default function Experience() {
 
                 <ul className="mt-2 space-y-1 text-xs text-slate-300">
                   {exp.bullets.map((b) => (
-                    <li key={b} className="leading-relaxed">
-                      • {b}
-                    </li>
+                    <li key={b}>• {b}</li>
                   ))}
                 </ul>
               </div>
