@@ -1,6 +1,8 @@
+import AnimatedSection from "./AnimatedSection";
+
 export default function Contact() {
   return (
-    <section id="contact" className="space-y-4 scroll-mt-28">
+    <AnimatedSection id="contact" className="space-y-4" delay={0.2}>
       <h2 className="text-xl font-semibold tracking-tight">
         Contact
       </h2>
@@ -39,7 +41,7 @@ export default function Contact() {
               LinkedIn ↗
             </a>
             <a
-              href="https://github.com/huseinhaji"
+              href="https://github.com/"
               target="_blank"
               rel="noreferrer"
               className="text-slate-200 hover:text-sky-300 text-xs"
@@ -57,6 +59,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

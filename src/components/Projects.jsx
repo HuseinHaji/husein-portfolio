@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AnimatedSection from "./AnimatedSection";
 
 const projects = [
   {
@@ -53,7 +54,7 @@ export default function Projects() {
   const activeProject = projects.find((p) => p.slug === activeSlug);
 
   return (
-    <section id="projects" className="space-y-4 scroll-mt-28">
+    <AnimatedSection id="projects" className="space-y-4" delay={0.1}>
       <h2 className="text-xl font-semibold tracking-tight">
         Projects
       </h2>
@@ -72,10 +73,10 @@ export default function Projects() {
               <button
                 key={project.slug}
                 onClick={() => setActiveSlug(project.slug)}
-                className={`w-full text-left rounded-2xl border p-4 transition-colors ${
+                className={`w-full text-left rounded-2xl border p-4 transition-all ${
                   isActive
                     ? "border-sky-500/90 bg-slate-900 shadow-lg shadow-sky-900/40"
-                    : "border-slate-800 bg-slate-900/40 hover:border-slate-600"
+                    : "border-slate-800 bg-slate-900/40 hover:border-slate-600 hover:bg-slate-900"
                 }`}
               >
                 <div className="flex items-center justify-between gap-2">
@@ -165,6 +166,6 @@ export default function Projects() {
           </div>
         )}
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

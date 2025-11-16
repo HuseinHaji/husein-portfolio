@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 const skillGroups = [
   {
     title: "Programming & Data",
@@ -44,7 +46,7 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="space-y-4 scroll-mt-28">
+    <AnimatedSection id="skills" className="space-y-4" delay={0.05}>
       <h2 className="text-xl font-semibold tracking-tight">
         Skills
       </h2>
@@ -70,6 +72,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

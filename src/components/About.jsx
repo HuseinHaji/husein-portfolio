@@ -1,6 +1,8 @@
+import AnimatedSection from "./AnimatedSection";
+
 export default function About() {
   return (
-    <section id="about" className="space-y-4 scroll-mt-28">
+    <AnimatedSection id="about" className="space-y-4">
       <h2 className="text-xl font-semibold tracking-tight">
         About
       </h2>
@@ -43,6 +45,15 @@ export default function About() {
         &quot;lab&quot; where I constantly experiment with new tools, workflows
         and projects that sharpen my skills.
       </p>
-    </section>
+
+      <p className="text-sm leading-relaxed text-slate-300">
+        I am currently looking for roles such as{" "}
+        <span className="font-medium">Working Student Data Analyst</span>,{" "}
+        <span className="font-medium">Junior Data Analyst</span>, or{" "}
+        <span className="font-medium">analytics-focused internships</span>{" "}
+        in Germany where I can combine my practical experience with my ongoing
+        Economics studies.
+      </p>
+    </AnimatedSection>
   );
 }

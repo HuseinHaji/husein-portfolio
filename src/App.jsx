@@ -21,7 +21,7 @@ function App() {
       </main>
 
       <footer className="border-t border-slate-800 py-6 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} Husein Hajiyev. All rights reserved.
+        © {new Date().getFullYear()} Huseyn Hajiyev. All rights reserved.
       </footer>
     </div>
   );

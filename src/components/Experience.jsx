@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 const experiences = [
   {
     role: "Data Analyst",
@@ -44,14 +46,17 @@ const experiences = [
   },
 ];
 
+// simple sort newest-ish first; if you prefer fixed order, just map `experiences` directly
+const sortedExperiences = [...experiences]; // you can sort here if you want
+
 export default function Experience() {
   return (
-    <section id="experience" className="space-y-4 scroll-mt-28">
+    <AnimatedSection id="experience" className="space-y-4" delay={0.15}>
       <h2 className="text-xl font-semibold tracking-tight">
         Experience & Education
       </h2>
       <div className="space-y-4">
-        {experiences.map((exp) => (
+        {sortedExperiences.map((exp) => (
           <div
             key={exp.role + exp.org}
             className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4"
@@ -78,6 +83,6 @@ export default function Experience() {
           </div>
         ))}
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

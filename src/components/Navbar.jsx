@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const navItems = [
   { id: "about", label: "About" },
@@ -27,11 +28,17 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll(); // run once on mount
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-30 backdrop-blur border-b border-slate-800/80 bg-slate-950/70">
+    <motion.header
+      className="fixed top-0 inset-x-0 z-30 backdrop-blur border-b border-slate-800/80 bg-slate-950/70"
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between h-16">
         {/* Logo + language selector */}
         <div className="flex items-center gap-4">
@@ -61,18 +68,18 @@ export default function Navbar() {
               key={item.id}
               href={`#${item.id}`}
               onClick={() => setActive(item.id)}
-              className={`transition-all ${
+              className={`transition-all rounded-md px-1 ${
                 active === item.id
                   ? "text-sky-400 font-semibold"
                   : "text-slate-300 hover:text-sky-400"
-              } focus:outline-none focus-visible:ring-1 focus-visible:ring-sky-500 rounded-md px-1`}
+              } focus:outline-none focus-visible:ring-1 focus-visible:ring-sky-500`}
             >
               {item.label}
             </a>
           ))}
-        </div>
+        </div }
 
-        {/* Mobile simple nav (just anchors, no burger for now) */}
+        {/* Mobile simple nav */}
         <div className="flex sm:hidden gap-3 text-xs">
           {navItems.map((item) => (
             <a
@@ -90,6 +97,6 @@ export default function Navbar() {
           ))}
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 }
