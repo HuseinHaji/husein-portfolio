@@ -17,25 +17,23 @@ export default function Hero() {
         <p className="text-xs uppercase tracking-[0.25em] text-sky-400">
           Data · Analytics · Economics
         </p>
+
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
           Hi, I&apos;m{" "}
-          <span className="text-sky-400">
-            Huseyn Hajiyev
-          </span>
+          <span className="text-sky-400">Huseyn Hajiyev</span>
         </h1>
+
         <p className="text-lg text-slate-300 max-w-xl">
           Data Analyst and Economics student with{" "}
           <span className="text-sky-300">
-            hands-on experience in data analysis, machine learning and
-            visualization
+            hands-on experience in data analysis, machine learning and visualization
           </span>
-          . I enjoy turning raw data into clear, actionable insights that
-          support real business and policy decisions.
+          . I enjoy turning raw data into clear, actionable insights that support
+          real business and policy decisions.
         </p>
 
         <p className="text-sm text-slate-400">
-          Data Analyst · M.Sc. Economics (Bonn) · Open to Working Student /
-          Internship roles in Germany
+          Data Analyst · M.Sc. Economics (Bonn) · Open to Working Student / Internship roles in Germany
         </p>
 
         <div className="flex flex-wrap gap-3 pt-2">
@@ -45,12 +43,14 @@ export default function Hero() {
           >
             View projects
           </a>
+
           <a
             href="#contact"
             className="px-4 py-2 rounded-full border border-slate-700 hover:border-sky-400 text-sm font-semibold text-slate-200 hover:text-sky-300 transition-colors"
           >
             Contact me
           </a>
+
           <a
             href="/Huseyn_Hajiyev_Resume.pdf"
             className="px-4 py-2 rounded-full border border-slate-700 hover:border-sky-400 text-sm font-semibold text-slate-200 hover:text-sky-300 transition-colors"
@@ -77,19 +77,19 @@ export default function Hero() {
         </p>
       </motion.div>
 
-      {/* Right – card */}
+      {/* Right – card (BIGGER) */}
       <motion.div
-        className="w-full md:w-64"
+        className="w-full md:w-80"    // <--- increased from md:w-64
         initial={{ opacity: 0, x: 24 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
       >
-        <div className="relative rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-5 shadow-lg shadow-sky-950/40">
+        <div className="relative rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-7 shadow-lg shadow-sky-950/40">
           <a
             href="https://www.linkedin.com/in/huseynhajiyev10"
             target="_blank"
             rel="noopener noreferrer"
-            className="block h-28 w-28 mx-auto mb-4 rounded-2xl overflow-hidden border border-slate-700 hover:border-sky-400 transition-all"
+            className="block h-36 w-36 mx-auto mb-5 rounded-2xl overflow-hidden border border-slate-700 hover:border-sky-400 transition-all"
           >
             <img
               src={huseynPhoto}
@@ -97,11 +97,13 @@ export default function Hero() {
               className="h-full w-full object-cover"
             />
           </a>
-          <div className="space-y-1 text-center">
-            <p className="text-sm font-semibold text-slate-100">
+
+          <div className="space-y-2 text-center">
+            <p className="text-base font-semibold text-slate-100">
               Data Analyst & Econ Student
             </p>
-            <p className="text-xs text-slate-400">
+
+            <p className="text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
               M.Sc. Economics · 3 years of analytics experience · Portfolio
               designed for data roles.
             </p>
