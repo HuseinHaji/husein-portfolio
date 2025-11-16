@@ -9,3 +9,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+}

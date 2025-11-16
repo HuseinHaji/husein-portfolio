@@ -53,7 +53,7 @@ export default function Projects() {
   const activeProject = projects.find((p) => p.slug === activeSlug);
 
   return (
-    <section id="projects" className="space-y-4">
+    <section id="projects" className="space-y-4 scroll-mt-28">
       <h2 className="text-xl font-semibold tracking-tight">
         Projects
       </h2>
@@ -74,7 +74,7 @@ export default function Projects() {
                 onClick={() => setActiveSlug(project.slug)}
                 className={`w-full text-left rounded-2xl border p-4 transition-colors ${
                   isActive
-                    ? "border-sky-500/70 bg-slate-900"
+                    ? "border-sky-500/90 bg-slate-900 shadow-lg shadow-sky-900/40"
                     : "border-slate-800 bg-slate-900/40 hover:border-slate-600"
                 }`}
               >

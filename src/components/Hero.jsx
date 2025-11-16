@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="flex flex-col md:flex-row items-start md:items-center gap-8"
+      className="space-y-4 scroll-mt-28"
     >
       {/* Left – text */}
       <div className="flex-1 space-y-4">
@@ -49,11 +49,18 @@ export default function Hero() {
       <div className="w-full md:w-64">
         <div className="relative rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-5 shadow-lg shadow-sky-950/40">
         <div className="h-28 w-28 mx-auto mb-4 rounded-2xl overflow-hidden border border-slate-700">
-          <img
-            src={huseynPhoto}
-            alt="Huseyn Hajiyev"
-            className="h-full w-full object-cover"
-          />
+          <a
+            href="https://www.linkedin.com/in/huseynhajiyev10"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block h-28 w-28 mx-auto mb-4 rounded-2xl overflow-hidden border border-slate-700 hover:border-sky-400 transition-all"
+          >
+            <img
+              src={huseynPhoto}   // keep your import
+              alt="Huseyn Hajiyev"
+              className="h-full w-full object-cover"
+            />
+          </a>
         </div>
           <div className="space-y-1 text-center">
             <p className="text-sm font-semibold text-slate-100">

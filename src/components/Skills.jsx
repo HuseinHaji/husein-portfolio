@@ -44,7 +44,7 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="space-y-4">
+    <section id="skills" className="space-y-4 scroll-mt-28">
       <h2 className="text-xl font-semibold tracking-tight">
         Skills
       </h2>

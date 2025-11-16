@@ -11,7 +11,7 @@ function App() {
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 space-y-24">
+      <main className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-24 pb-24 space-y-28 text-[15px] sm:text-[16px]">
         <Hero />
         <About />
         <Skills />
