@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import huseynPhoto from "../assets/huseyn.jpeg";
+import huseynPhoto from "../assets/huseyn.png";
 
 export default function Hero() {
   return (
