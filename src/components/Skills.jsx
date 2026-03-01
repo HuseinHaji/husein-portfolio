@@ -20,7 +20,7 @@ export default function Skills() {
     <AnimatedSection id="skills" className="space-y-4" delay={0.05}>
       <h2 className="text-xl font-semibold tracking-tight">Skills</h2>
 
-      <p className="text-sm text-slate-300 max-w-2xl">
+      <p className="text-sm text-slate-600 max-w-2xl">
         I&apos;m most comfortable working end-to-end on analytics problems:
         pulling data, cleaning it, modeling it and turning it into clear,
         visual stories for decision makers.
@@ -36,19 +36,19 @@ export default function Skills() {
         {/* Core analytics work */}
         <motion.div
           variants={cardVariants}
-          className="rounded-2xl border border-slate-800 bg-slate-900/50 p-4 space-y-3"
+          className="rounded-2xl border border-slate-300 bg-white/50 p-4 space-y-3"
         >
-          <h3 className="text-sm font-semibold text-slate-100">
+          <h3 className="text-sm font-semibold text-slate-900">
             Core analytics & modeling
           </h3>
-          <ul className="space-y-1.5 text-xs text-slate-300">
+          <ul className="space-y-1.5 text-xs text-slate-600">
             <li>
-              • <span className="font-medium text-sky-300">Python</span> for data
+              • <span className="font-medium text-blue-500">Python</span> for data
               cleaning, feature engineering and modeling (Pandas, NumPy, SciPy,
               scikit-learn).
             </li>
             <li>
-              • <span className="font-medium text-sky-300">SQL</span> (Oracle,
+              • <span className="font-medium text-blue-500">SQL</span> (Oracle,
               PostgreSQL, MySQL) for querying, joins and analytical reporting.
             </li>
             <li>
@@ -65,19 +65,19 @@ export default function Skills() {
         {/* BI, visualization & soft skills */}
         <motion.div
           variants={cardVariants}
-          className="rounded-2xl border border-slate-800 bg-slate-900/50 p-4 space-y-3"
+          className="rounded-2xl border border-slate-300 bg-white/50 p-4 space-y-3"
         >
-          <h3 className="text-sm font-semibold text-slate-100">
+          <h3 className="text-sm font-semibold text-slate-900">
             BI, visualization & communication
           </h3>
-          <ul className="space-y-1.5 text-xs text-slate-300">
+          <ul className="space-y-1.5 text-xs text-slate-600">
             <li>
-              • <span className="font-medium text-sky-300">Power BI</span> and{" "}
-              <span className="font-medium text-sky-300">Tableau</span> for
+              • <span className="font-medium text-blue-500">Power BI</span> and{" "}
+              <span className="font-medium text-blue-500">Tableau</span> for
               interactive dashboards and management reporting.
             </li>
             <li>
-              • <span className="font-medium text-sky-300">Excel (advanced)</span>{" "}
+              • <span className="font-medium text-blue-500">Excel (advanced)</span>{" "}
               for quick analysis, prototyping and hand-over to non-technical teams.
             </li>
             <li>
@@ -94,12 +94,12 @@ export default function Skills() {
         {/* Optional small third card (tools & workflow) */}
         <motion.div
           variants={cardVariants}
-          className="md:col-span-2 rounded-2xl border border-slate-800 bg-slate-900/40 p-4 space-y-2"
+          className="md:col-span-2 rounded-2xl border border-slate-300 bg-white/40 p-4 space-y-2"
         >
-          <h3 className="text-sm font-semibold text-slate-100">
+          <h3 className="text-sm font-semibold text-slate-900">
             Tools & workflow
           </h3>
-          <p className="text-xs text-slate-300">
+          <p className="text-xs text-slate-600">
             Git & GitHub · Jupyter / VS Code · Oracle DB · basic R · basic
             TensorFlow/Keras · documentation and reproducible analysis (notebooks,
             dashboards, clear reports).

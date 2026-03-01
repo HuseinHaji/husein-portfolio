@@ -22,7 +22,7 @@ export default function BackToTop() {
       {visible && (
         <motion.button
           onClick={handleClick}
-          className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 rounded-full border border-sky-500/70 bg-slate-900/90 px-3 py-2 text-xs sm:text-sm text-sky-100 shadow-lg shadow-sky-900/40 hover:bg-slate-900 hover:border-sky-400 transition-colors z-40"
+          className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 rounded-full border border-blue-600/70 bg-white/90 px-3 py-2 text-xs sm:text-sm text-slate-900 shadow-lg shadow-slate-200 hover:bg-white hover:border-blue-600 transition-colors z-40"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 16 }}

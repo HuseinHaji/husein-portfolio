@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <motion.header
-      className="fixed top-0 inset-x-0 z-30 backdrop-blur border-b border-slate-800/80 bg-slate-950/80"
+      className="fixed top-0 inset-x-0 z-30 backdrop-blur border-b border-slate-300 bg-white/90"
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
@@ -47,10 +47,10 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href="#top"
-            className="text-sm font-semibold tracking-tight text-slate-100"
+            className="text-sm font-semibold tracking-tight text-slate-900"
           >
             <span>Husein</span>
-            <span className="text-sky-400">.dev</span>
+            <span className="text-blue-600">.dev</span>
           </a>
         </div>
 
@@ -63,9 +63,9 @@ export default function Navbar() {
               onClick={() => setActive(item.id)}
               className={`transition-all rounded-md px-1 ${
                 active === item.id
-                  ? "text-sky-400 font-semibold"
-                  : "text-slate-300 hover:text-sky-400"
-              } focus:outline-none focus-visible:ring-1 focus-visible:ring-sky-500`}
+                  ? "text-blue-600 font-semibold"
+                  : "text-slate-600 hover:text-blue-600"
+              } focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-600`}
             >
               {item.label}
             </a>
@@ -77,7 +77,7 @@ export default function Navbar() {
             className="ml-4 inline-flex items-center"
             aria-label="Theme toggle (visual only)"
           >
-            <div className="relative w-11 h-6 rounded-full bg-slate-800 border border-slate-600 flex items-center px-1">
+            <div className="relative w-11 h-6 rounded-full bg-slate-100 border border-slate-300 flex items-center px-1">
               <motion.div
                 className="h-4 w-4 rounded-full bg-slate-100 text-[10px] flex items-center justify-center"
                 animate={{
@@ -100,8 +100,8 @@ export default function Navbar() {
               onClick={() => setActive(item.id)}
               className={`transition-all ${
                 active === item.id
-                  ? "text-sky-400 font-semibold"
-                  : "text-slate-300 hover:text-sky-400"
+                  ? "text-blue-600 font-semibold"
+                  : "text-slate-600 hover:text-blue-600"
               }`}
             >
               {item.label}
@@ -113,7 +113,7 @@ export default function Navbar() {
             className="inline-flex items-center"
             aria-label="Theme toggle (visual only)"
           >
-            <div className="relative w-10 h-5 rounded-full bg-slate-800 border border-slate-600 flex items-center px-[2px]">
+            <div className="relative w-10 h-5 rounded-full bg-slate-100 border border-slate-300 flex items-center px-[2px]">
               <motion.div
                 className="h-4 w-4 rounded-full bg-slate-100 text-[9px] flex items-center justify-center"
                 animate={{

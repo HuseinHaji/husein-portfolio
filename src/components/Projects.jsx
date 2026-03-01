@@ -78,7 +78,7 @@ export default function Projects() {
       <h2 className="text-xl font-semibold tracking-tight">
         Projects
       </h2>
-      <p className="text-sm text-slate-300">
+      <p className="text-sm text-slate-600">
         A selection of projects that combine my interests in data analytics,
         econometrics and automation. Click a project on the left to see more
         detail.
@@ -102,26 +102,26 @@ export default function Projects() {
                 onClick={() => setActiveSlug(project.slug)}
                 className={`w-full text-left rounded-2xl border p-4 transition-all ${
                   isActive
-                    ? "border-sky-500/90 bg-slate-900 shadow-lg shadow-sky-900/40"
-                    : "border-slate-800 bg-slate-900/40 hover:border-slate-600 hover:bg-slate-900"
+                    ? "border-blue-600/90 bg-white shadow-lg shadow-slate-200"
+                    : "border-slate-300 bg-white/40 hover:border-slate-300 hover:bg-white"
                 }`}
               >
                 <div className="flex items-center justify-between gap-2">
-                  <h3 className="text-sm font-semibold text-slate-100">
+                  <h3 className="text-sm font-semibold text-slate-900">
                     {project.name}
                   </h3>
-                  <span className="text-[11px] text-slate-400">
+                  <span className="text-[11px] text-slate-500">
                     {project.status}
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-slate-300 line-clamp-2">
+                <p className="mt-1 text-xs text-slate-600 line-clamp-2">
                   {project.description}
                 </p>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {project.tech.slice(0, 3).map((t) => (
                     <span
                       key={t}
-                      className="inline-flex items-center rounded-full bg-slate-800 px-2 py-0.5 text-[11px] text-slate-200"
+                      className="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[11px] text-slate-800"
                     >
                       {t}
                     </span>
@@ -136,7 +136,7 @@ export default function Projects() {
         {activeProject && (
           <motion.div
             key={activeProject.slug}
-            className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 space-y-3"
+            className="rounded-2xl border border-slate-300 bg-white/60 p-5 space-y-3"
             variants={panelVariants}
             initial="hidden"
             animate="visible"
@@ -144,27 +144,27 @@ export default function Projects() {
           >
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <div>
-                <h3 className="text-sm font-semibold text-slate-100">
+                <h3 className="text-sm font-semibold text-slate-900">
                   {activeProject.name}
                 </h3>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-slate-500">
                   {activeProject.role}
                 </p>
               </div>
-              <span className="text-[11px] text-sky-400">
+              <span className="text-[11px] text-blue-600">
                 {activeProject.status}
               </span>
             </div>
 
-            <p className="text-xs text-slate-300">
+            <p className="text-xs text-slate-600">
               {activeProject.description}
             </p>
 
             <div className="space-y-1.5">
-              <p className="text-[11px] font-semibold text-slate-200">
+              <p className="text-[11px] font-semibold text-slate-800">
                 Highlights
               </p>
-              <ul className="space-y-1 text-[11px] text-slate-300">
+              <ul className="space-y-1 text-[11px] text-slate-600">
                 {activeProject.highlights.map((h) => (
                   <li key={h}>• {h}</li>
                 ))}
@@ -172,14 +172,14 @@ export default function Projects() {
             </div>
 
             <div className="space-y-1.5">
-              <p className="text-[11px] font-semibold text-slate-200">
+              <p className="text-[11px] font-semibold text-slate-800">
                 Tech stack
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {activeProject.tech.map((t) => (
                   <span
                     key={t}
-                    className="inline-flex items-center rounded-full border border-slate-700 bg-slate-900 px-2 py-0.5 text-[11px] text-slate-200"
+                    className="inline-flex items-center rounded-full border border-slate-300 bg-white px-2 py-0.5 text-[11px] text-slate-800"
                   >
                     {t}
                   </span>
@@ -192,7 +192,7 @@ export default function Projects() {
                 href={activeProject.link}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex text-[11px] font-medium text-sky-400 hover:text-sky-300"
+                className="inline-flex text-[11px] font-medium text-blue-600 hover:text-blue-500"
               >
                 View on GitHub ↗
               </a>

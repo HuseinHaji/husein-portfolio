@@ -24,25 +24,25 @@ export default function TechStackStrip() {
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <div className="rounded-2xl border border-slate-800 bg-slate-900/70 px-5 py-4 sm:px-6 sm:py-5 space-y-3">
-        <p className="text-xs sm:text-sm font-semibold text-slate-100">
+      <div className="rounded-2xl border border-slate-300 bg-white/70 px-5 py-4 sm:px-6 sm:py-5 space-y-3">
+        <p className="text-xs sm:text-sm font-semibold text-slate-900">
           Tech I use to ship real work:
         </p>
 
-        <div className="space-y-2.5 text-[11px] sm:text-xs text-slate-300">
+        <div className="space-y-2.5 text-[11px] sm:text-xs text-slate-600">
           {rows.map((row) => (
             <div
               key={row.label}
               className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2"
             >
-              <span className="w-40 shrink-0 font-medium text-slate-200">
+              <span className="w-40 shrink-0 font-medium text-slate-800">
                 {row.label}
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {row.items.map((item) => (
                   <span
                     key={item}
-                    className="inline-flex items-center rounded-full bg-slate-950/70 border border-slate-700 px-2.5 py-0.5"
+                    className="inline-flex items-center rounded-full bg-white/70 border border-slate-300 px-2.5 py-0.5"
                   >
                     {item}
                   </span>
