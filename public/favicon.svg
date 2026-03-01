@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .hexagon { fill: none; stroke: #2563EB; stroke-width: 2; }
+      .text { font-family: system-ui, ui-sans-serif, sans-serif; font-size: 40px; font-weight: 700; fill: #2563EB; text-anchor: middle; dominant-baseline: central; }
+    </style>
+  </defs>
+  <!-- Hexagon background -->
+  <polygon class="hexagon" points="50,10 86.6,30 86.6,70 50,90 13.4,70 13.4,30"/>
+  <!-- HH text -->
+  <text class="text" x="50" y="50">HH</text>
+</svg>
