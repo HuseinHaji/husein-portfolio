@@ -19,7 +19,7 @@ function App() {
     <div className="min-h-screen bg-bg text-text">
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-16 pb-16 space-y-8 sm:space-y-16 text-[15px] sm:text-[16px]">
+      <main className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-0 pb-16 space-y-8 sm:space-y-16 text-[15px] sm:text-[16px]">
         <Hero />
         <TechStackStrip />
         <SectionDivider />

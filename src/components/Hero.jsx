@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="flex flex-col md:flex-row items-start md:items-center gap-10 sm:gap-12"
+      className="scroll-mt-28 flex flex-col md:flex-row items-start md:items-center gap-10 sm:gap-12 pt-24"
     >
       {/* Left – text */}
       <motion.div
