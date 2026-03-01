@@ -44,8 +44,7 @@ export default function Navbar() {
             href="#top"
             className="text-sm font-semibold tracking-tight text-text"
           >
-            <span>Husein</span>
-            <span className="text-accent">.dev</span>
+            <span>Huseyn Hajiyev</span>
           </a>
         </div>
 
