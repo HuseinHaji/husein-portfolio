@@ -16,7 +16,7 @@ import InstagramIcon from "./icons/Instagram";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-bg text-text">
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-24 pb-24 space-y-16 sm:space-y-24 text-[15px] sm:text-[16px]">
@@ -39,13 +39,13 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="border-t border-slate-300 py-6">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
+      <footer className="border-t border-border py-6 bg-bg">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
           <p>© {new Date().getFullYear()} Huseyn Hajiyev. All rights reserved.</p>
           <div className="flex items-center gap-4 text-xs">
             <a
               href="mailto:huseynhadjiyev@outlook.com"
-              className="inline-flex items-center gap-1 hover:text-blue-600 transition-colors"
+              className="inline-flex items-center gap-1 hover:text-accent transition-colors focus-visible:ring-1 focus-visible:ring-accent"
             >
               <EmailIcon className="w-4 h-4" />
               <span>Email</span>
@@ -55,7 +55,7 @@ function App() {
               href="https://www.linkedin.com/in/huseynhajiyev10"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 hover:text-blue-600 transition-colors"
+              className="inline-flex items-center gap-1 hover:text-accent transition-colors focus-visible:ring-1 focus-visible:ring-accent"
             >
               <LinkedInIcon className="w-4 h-4" />
               <span>LinkedIn</span>
@@ -65,7 +65,7 @@ function App() {
               href="https://github.com/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 hover:text-blue-600 transition-colors"
+              className="inline-flex items-center gap-1 hover:text-accent transition-colors focus-visible:ring-1 focus-visible:ring-accent"
             >
               <GitHubIcon className="w-4 h-4" />
               <span>GitHub</span>
@@ -75,7 +75,7 @@ function App() {
               href="https://www.instagram.com/huseinhajiev"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 hover:text-blue-600 transition-colors"
+              className="inline-flex items-center gap-1 hover:text-accent transition-colors focus-visible:ring-1 focus-visible:ring-accent"
             >
               <InstagramIcon className="w-4 h-4" />
               <span>Instagram</span>

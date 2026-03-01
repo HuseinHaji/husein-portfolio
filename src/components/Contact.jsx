@@ -9,20 +9,20 @@ export default function Contact() {
     <AnimatedSection id="contact" className="space-y-4" delay={0.2}>
       <h2 className="text-xl font-semibold tracking-tight">Contact</h2>
 
-      <p className="text-sm text-slate-600 max-w-xl">
-        Feel free to reach out about analytics, research or opportunities.
+      <p className="text-sm text-muted max-w-xl leading-relaxed">
+        Interested in discussing analytics, research, or opportunities? Let's connect.
       </p>
 
       <div className="grid gap-3 sm:grid-cols-2">
 
         {/* Email card */}
-        <div className="rounded-2xl border border-slate-300 bg-white/40 p-4 text-sm space-y-2">
-          <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+        <div className="rounded-2xl border border-border bg-surface p-4 text-sm space-y-2 shadow-sm">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted">
             Email
           </p>
           <a
             href="mailto:huseynhadjiyev@outlook.com"
-            className="flex items-center gap-2 text-blue-600 hover:text-blue-500"
+            className="flex items-center gap-2 text-accent hover:text-accent-hover transition-colors focus-visible:ring-1 focus-visible:ring-accent font-medium"
           >
             <EmailIcon className="w-4 h-4" />
             huseynhadjiyev@outlook.com
@@ -30,8 +30,8 @@ export default function Contact() {
         </div>
 
         {/* Socials card */}
-        <div className="rounded-2xl border border-slate-300 bg-white/40 p-4 text-sm space-y-2">
-          <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+        <div className="rounded-2xl border border-border bg-surface p-4 text-sm space-y-2 shadow-sm">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted">
             Socials
           </p>
 
@@ -41,7 +41,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/huseynhajiyev10"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 text-slate-800 hover:text-blue-500"
+              className="flex items-center gap-2 text-text hover:text-accent transition-colors focus-visible:ring-1 focus-visible:ring-accent"
             >
               <LinkedInIcon className="w-4 h-4" />
               LinkedIn
@@ -51,7 +51,7 @@ export default function Contact() {
               href="https://github.com/"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 text-slate-800 hover:text-blue-500"
+              className="flex items-center gap-2 text-text hover:text-accent transition-colors focus-visible:ring-1 focus-visible:ring-accent"
             >
               <GitHubIcon className="w-4 h-4" />
               GitHub
@@ -61,7 +61,7 @@ export default function Contact() {
               href="https://www.instagram.com/huseinhajiev"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 text-slate-800 hover:text-blue-500"
+              className="flex items-center gap-2 text-text hover:text-accent transition-colors focus-visible:ring-1 focus-visible:ring-accent"
             >
               <InstagramIcon className="w-4 h-4" />
               Instagram

@@ -7,10 +7,10 @@ export default function About() {
         About
       </h2>
 
-      <p className="text-sm leading-relaxed text-slate-600">
+      <p className="text-sm leading-relaxed text-muted">
         I&apos;m a{" "}
-        <span className="font-medium text-blue-500">Data Analyst</span> and{" "}
-        <span className="font-medium text-blue-500">
+        <span className="font-medium text-accent">Data Analyst</span> and{" "}
+        <span className="font-medium text-accent">
           M.Sc. Economics student at the University of Bonn
         </span>
         . Before moving to Germany, I completed a{" "}
@@ -22,7 +22,7 @@ export default function About() {
         quantitative thinking.
       </p>
 
-      <p className="text-sm leading-relaxed text-slate-600">
+      <p className="text-sm leading-relaxed text-muted">
         Over the last years, I have worked in{" "}
         <span className="font-medium">data analyst and data scientist roles</span>{" "}
         in finance and analytics companies. I&apos;ve been involved in building
@@ -31,7 +31,7 @@ export default function About() {
         forecasting.
       </p>
 
-      <p className="text-sm leading-relaxed text-slate-600">
+      <p className="text-sm leading-relaxed text-muted">
         My interests sit at the intersection of{" "}
         <span className="font-medium">data analytics, econometrics and finance</span>.
         I enjoy the full workflow: from collecting and cleaning data, to modeling
@@ -39,14 +39,14 @@ export default function About() {
         practical way to non-technical stakeholders.
       </p>
 
-      <p className="text-sm leading-relaxed text-slate-600">
+      <p className="text-sm leading-relaxed text-muted">
         Outside of work and university, I&apos;m into kickboxing, strength
         training and photography. I like to treat my workspace as a small
         &quot;lab&quot; where I constantly experiment with new tools, workflows
         and projects that sharpen my skills.
       </p>
 
-      <p className="text-sm leading-relaxed text-slate-600">
+      <p className="text-sm leading-relaxed text-muted">
         I am currently looking for roles such as{" "}
         <span className="font-medium">Working Student Data Analyst</span>,{" "}
         <span className="font-medium">Junior Data Analyst</span>, or{" "}

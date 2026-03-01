@@ -11,7 +11,6 @@ const navItems = [
 
 export default function Navbar() {
   const [active, setActive] = useState("about");
-  const [fakeThemeOn, setFakeThemeOn] = useState(true); // just for toggle animation
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,13 +30,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleToggle = () => {
-    setFakeThemeOn((prev) => !prev);
-  };
-
   return (
     <motion.header
-      className="fixed top-0 inset-x-0 z-30 backdrop-blur border-b border-slate-300 bg-white/90"
+      className="fixed top-0 inset-x-0 z-30 backdrop-blur border-b border-border bg-surface/90"
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
@@ -47,86 +42,50 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href="#top"
-            className="text-sm font-semibold tracking-tight text-slate-900"
+            className="text-sm font-semibold tracking-tight text-text"
           >
             <span>Husein</span>
-            <span className="text-blue-600">.dev</span>
+            <span className="text-accent">.dev</span>
           </a>
         </div>
 
         {/* Desktop nav */}
-        <div className="hidden sm:flex items-center gap-6 text-sm">
+        <div className="hidden sm:flex items-center gap-8 text-sm">
           {navItems.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
               onClick={() => setActive(item.id)}
-              className={`transition-all rounded-md px-1 ${
+              className={`transition-colors rounded-md px-1 ${
                 active === item.id
-                  ? "text-blue-600 font-semibold"
-                  : "text-slate-600 hover:text-blue-600"
-              } focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-600`}
+                  ? "text-accent font-semibold"
+                  : "text-muted hover:text-text"
+              } focus:outline-none focus-visible:ring-1 focus-visible:ring-accent`}
             >
               {item.label}
             </a>
           ))}
-
-          {/* iPhone-style toggle (just for vibe) */}
-          <button
-            onClick={handleToggle}
-            className="ml-4 inline-flex items-center"
-            aria-label="Theme toggle (visual only)"
-          >
-            <div className="relative w-11 h-6 rounded-full bg-slate-100 border border-slate-300 flex items-center px-1">
-              <motion.div
-                className="h-4 w-4 rounded-full bg-slate-100 text-[10px] flex items-center justify-center"
-                animate={{
-                  x: fakeThemeOn ? 0 : 18,
-                }}
-                transition={{ type: "spring", stiffness: 250, damping: 20 }}
-              >
-                {fakeThemeOn ? "🌙" : "☀️"}
-              </motion.div>
-            </div>
-          </button>
         </div>
 
-        {/* Mobile nav + toggle */}
+        {/* Mobile nav */}
         <div className="flex sm:hidden items-center gap-3 text-xs">
           {navItems.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
               onClick={() => setActive(item.id)}
-              className={`transition-all ${
+              className={`transition-colors ${
                 active === item.id
-                  ? "text-blue-600 font-semibold"
-                  : "text-slate-600 hover:text-blue-600"
+                  ? "text-accent font-semibold"
+                  : "text-muted hover:text-text"
               }`}
             >
               {item.label}
             </a>
           ))}
-
-          <button
-            onClick={handleToggle}
-            className="inline-flex items-center"
-            aria-label="Theme toggle (visual only)"
-          >
-            <div className="relative w-10 h-5 rounded-full bg-slate-100 border border-slate-300 flex items-center px-[2px]">
-              <motion.div
-                className="h-4 w-4 rounded-full bg-slate-100 text-[9px] flex items-center justify-center"
-                animate={{
-                  x: fakeThemeOn ? 0 : 14,
-                }}
-                transition={{ type: "spring", stiffness: 250, damping: 20 }}
-              >
-                {fakeThemeOn ? "🌙" : "☀️"}
-              </motion.div>
-            </div>
-          </button>
         </div>
       </nav>
     </motion.header>
   );
 }
+

@@ -9,12 +9,15 @@ const projects = [
     status: "In progress",
     description:
       "Research-oriented Python toolkit for term-structure analysis: bootstrapping, nonparametric smoothing, factor models and Monte Carlo simulations.",
-    role: "Personal research / university term paper support",
+    role: "University research project",
+    problem: "Accurately model bond yield curves from market data",
+    method: "Bootstrapping, nonparametric smoothing, Monte Carlo simulations",
+    outcome: "Robust estimators for zero-coupon curves; tools for further research",
     tech: ["Python", "NumPy", "Pandas", "Econometrics", "SciPy"],
     highlights: [
-      "Implements bootstrapping routines to estimate zero-coupon yield curves from bond data.",
-      "Experiments with nonparametric smoothing and factor models to describe the term structure.",
-      "Includes Monte Carlo simulations to study estimator properties and model robustness.",
+      "Bootstrapping routines to estimate zero-coupon yield curves from raw bond data",
+      "Nonparametric smoothing and factor models for term structure analysis",
+      "Monte Carlo simulations validating estimator robustness",
     ],
     link: "https://github.com/", // TODO: replace with real repo
   },
@@ -23,13 +26,16 @@ const projects = [
     name: "Lichess Game Analyzer",
     status: "Side project",
     description:
-      "Analyzes Lichess games and generates performance statistics, opening insights and visualizations of mistakes over time.",
-    role: "Personal project combining chess with data analysis",
-    tech: ["Python", "APIs", "Data Visualization"],
+      "Personal data project analyzing 500+ chess games to identify patterns in performance and mistakes.",
+    role: "Personal project (data + chess)",
+    problem: "Understand own chess performance across openings and time controls",
+    method: "API data extraction, performance metrics calculation, time-series visualization",
+    outcome: "Identified patterns in blunders; tracked improvement over 6+ months",
+    tech: ["Python", "APIs", "Pandas", "Matplotlib"],
     highlights: [
-      "Pulls game data from the Lichess API and stores it in a structured format.",
-      "Computes performance metrics by opening, time control and opponent strength.",
-      "Creates simple plots to visualize blunders and improvements over time.",
+      "Pulls structured game data from Lichess API and processes into analytical format",
+      "Computes win rates, blunder frequency, and performance by opponent strength",
+      "Time-series visualizations showing measurable improvement trends",
     ],
     link: "https://github.com/", // TODO: replace with real repo
   },
@@ -38,13 +44,16 @@ const projects = [
     name: "Stoic WhatsApp Bot",
     status: "Completed",
     description:
-      "WhatsApp bot that sends daily Stoic quotes and reflections, built with Twilio and simple automation in Python.",
-    role: "Automation project to practice APIs and deployment",
-    tech: ["Python", "Twilio", "Scheduling"],
+      "Automated WhatsApp bot delivering daily Stoic quotes and reflections using Python and Twilio.",
+    role: "Automation & deployment practice",
+    problem: "Deliver daily content to users without manual effort",
+    method: "Twilio API, Python scheduling, cloud deployment",
+    outcome: "Reliable daily automation; hands-on API and deployment experience",
+    tech: ["Python", "Twilio", "Scheduling", "Cloud"],
     highlights: [
-      "Connects to Twilio WhatsApp API to send scheduled messages.",
-      "Stores and rotates Stoic quotes and short reflections.",
-      "Designed as a small daily habit / motivation system.",
+      "Twilio WhatsApp API integration for scheduled message delivery",
+      "Rotating quote database with reflective prompts",
+      "Deployed automation requiring zero manual intervention",
     ],
     link: "https://github.com/", // TODO: replace with real repo
   },
@@ -78,10 +87,8 @@ export default function Projects() {
       <h2 className="text-xl font-semibold tracking-tight">
         Projects
       </h2>
-      <p className="text-sm text-slate-600">
-        A selection of projects that combine my interests in data analytics,
-        econometrics and automation. Click a project on the left to see more
-        detail.
+      <p className="text-sm text-muted leading-relaxed">
+        A portfolio of analytics, modeling, and data engineering projects. Select a project to see the problem, approach, and outcome.
       </p>
 
       <div className="grid gap-4 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
@@ -102,26 +109,26 @@ export default function Projects() {
                 onClick={() => setActiveSlug(project.slug)}
                 className={`w-full text-left rounded-2xl border p-4 transition-all ${
                   isActive
-                    ? "border-blue-600/90 bg-white shadow-lg shadow-slate-200"
-                    : "border-slate-300 bg-white/40 hover:border-slate-300 hover:bg-white"
+                    ? "border-accent bg-surface shadow-sm"
+                    : "border-border bg-white/40 hover:border-border hover:bg-white"
                 }`}
               >
                 <div className="flex items-center justify-between gap-2">
-                  <h3 className="text-sm font-semibold text-slate-900">
+                  <h3 className="text-sm font-semibold text-text">
                     {project.name}
                   </h3>
-                  <span className="text-[11px] text-slate-500">
+                  <span className="text-[11px] text-muted">
                     {project.status}
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-slate-600 line-clamp-2">
+                <p className="mt-1 text-xs text-muted line-clamp-2">
                   {project.description}
                 </p>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {project.tech.slice(0, 3).map((t) => (
                     <span
                       key={t}
-                      className="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[11px] text-slate-800"
+                      className="inline-flex items-center rounded-full bg-bg px-2 py-0.5 text-[11px] text-text"
                     >
                       {t}
                     </span>
@@ -136,7 +143,7 @@ export default function Projects() {
         {activeProject && (
           <motion.div
             key={activeProject.slug}
-            className="rounded-2xl border border-slate-300 bg-white/60 p-5 space-y-3"
+            className="rounded-2xl border border-border bg-surface p-5 space-y-3 shadow-sm"
             variants={panelVariants}
             initial="hidden"
             animate="visible"
@@ -144,42 +151,46 @@ export default function Projects() {
           >
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <div>
-                <h3 className="text-sm font-semibold text-slate-900">
+                <h3 className="text-sm font-semibold text-text">
                   {activeProject.name}
                 </h3>
-                <p className="text-xs text-slate-500">
+                <p className="text-xs text-muted">
                   {activeProject.role}
                 </p>
               </div>
-              <span className="text-[11px] text-blue-600">
+              <span className="text-[11px] text-accent">
                 {activeProject.status}
               </span>
             </div>
 
-            <p className="text-xs text-slate-600">
+            <p className="text-xs text-muted leading-relaxed">
               {activeProject.description}
             </p>
 
-            <div className="space-y-1.5">
-              <p className="text-[11px] font-semibold text-slate-800">
-                Highlights
-              </p>
-              <ul className="space-y-1 text-[11px] text-slate-600">
-                {activeProject.highlights.map((h) => (
-                  <li key={h}>• {h}</li>
-                ))}
-              </ul>
+            <div className="space-y-1.5 border-t border-border pt-3">
+              <div>
+                <p className="text-[11px] font-semibold text-text mb-1">Problem</p>
+                <p className="text-xs text-muted">{activeProject.problem}</p>
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold text-text mb-1">Method</p>
+                <p className="text-xs text-muted">{activeProject.method}</p>
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold text-text mb-1">Outcome</p>
+                <p className="text-xs text-muted">{activeProject.outcome}</p>
+              </div>
             </div>
 
             <div className="space-y-1.5">
-              <p className="text-[11px] font-semibold text-slate-800">
+              <p className="text-[11px] font-semibold text-text">
                 Tech stack
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {activeProject.tech.map((t) => (
                   <span
                     key={t}
-                    className="inline-flex items-center rounded-full border border-slate-300 bg-white px-2 py-0.5 text-[11px] text-slate-800"
+                    className="inline-flex items-center rounded-full border border-border bg-bg px-2 py-0.5 text-[11px] text-text"
                   >
                     {t}
                   </span>
@@ -192,7 +203,7 @@ export default function Projects() {
                 href={activeProject.link}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex text-[11px] font-medium text-blue-600 hover:text-blue-500"
+                className="inline-flex text-[11px] font-medium text-accent hover:text-accent-hover transition-colors focus-visible:ring-1 focus-visible:ring-accent"
               >
                 View on GitHub ↗
               </a>

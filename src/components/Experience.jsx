@@ -101,7 +101,7 @@ export default function Experience() {
       {/* WORK EXPERIENCE TIMELINE */}
       {/* ---------------------- */}
       <div>
-        <h3 className="text-lg font-semibold text-blue-600 mb-4">
+        <h3 className="text-lg font-semibold text-accent mb-4">
           Work Experience
         </h3>
 
@@ -122,32 +122,32 @@ export default function Experience() {
               <div className="relative">
                 {/* vertical line for this item */}
                 <div
-                  className={`absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-slate-100/70 ${
+                  className={`absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border/70 ${
                     idx === work.length - 1 ? "bottom-4" : ""
                   }`}
                 />
                 {/* dot */}
-                <div className="relative mt-2 h-3 w-3 rounded-full border border-blue-600 bg-white mx-auto" />
+                <div className="relative mt-2 h-3 w-3 rounded-full border border-accent bg-white mx-auto" />
               </div>
 
               {/* Right: card */}
-              <div className="rounded-2xl border border-slate-300 bg-white/40 p-4">
+              <div className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
-                    <p className="text-sm font-semibold text-slate-900">
+                    <p className="text-sm font-semibold text-text">
                       {exp.role}
                     </p>
-                    <p className="text-xs text-slate-500">{exp.org}</p>
+                    <p className="text-xs text-muted">{exp.org}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-slate-500">{exp.period}</p>
-                    <p className="text-[11px] text-slate-500">
+                    <p className="text-xs text-muted">{exp.period}</p>
+                    <p className="text-[11px] text-muted">
                       {exp.location}
                     </p>
                   </div>
                 </div>
 
-                <ul className="mt-2 space-y-1 text-xs text-slate-600">
+                <ul className="mt-2 space-y-1 text-xs text-muted leading-relaxed">
                   {exp.bullets.map((b) => (
                     <li key={b} className="leading-relaxed">
                       • {b}
@@ -164,7 +164,7 @@ export default function Experience() {
       {/* EDUCATION TIMELINE */}
       {/* ---------------------- */}
       <div>
-        <h3 className="text-lg font-semibold text-blue-600 mb-4">
+        <h3 className="text-lg font-semibold text-accent mb-4">
           Education
         </h3>
 
@@ -184,31 +184,31 @@ export default function Experience() {
               {/* Left: line + dot */}
               <div className="relative">
                 <div
-                  className={`absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-slate-100/70 ${
+                  className={`absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border/70 ${
                     idx === education.length - 1 ? "bottom-4" : ""
                   }`}
                 />
-                <div className="relative mt-2 h-3 w-3 rounded-full border border-blue-600 bg-white mx-auto" />
+                <div className="relative mt-2 h-3 w-3 rounded-full border border-accent bg-white mx-auto" />
               </div>
 
               {/* Right: card */}
-              <div className="rounded-2xl border border-slate-300 bg-white/40 p-4">
+              <div className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
-                    <p className="text-sm font-semibold text-slate-900">
+                    <p className="text-sm font-semibold text-text">
                       {exp.role}
                     </p>
-                    <p className="text-xs text-slate-500">{exp.org}</p>
+                    <p className="text-xs text-muted">{exp.org}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-slate-500">{exp.period}</p>
-                    <p className="text-[11px] text-slate-500">
+                    <p className="text-xs text-muted">{exp.period}</p>
+                    <p className="text-[11px] text-muted">
                       {exp.location}
                     </p>
                   </div>
                 </div>
 
-                <ul className="mt-2 space-y-1 text-xs text-slate-600">
+                <ul className="mt-2 space-y-1 text-xs text-muted leading-relaxed">
                   {exp.bullets.map((b) => (
                     <li key={b} className="leading-relaxed">
                       • {b}
